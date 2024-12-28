@@ -1,0 +1,391 @@
+@font-face {
+  font-family: 'Navigo';
+  src: url('../fonts/Navigo-Regular-Desktop.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dark-bg {
+  background-color: #102D69;
+  color: #fff;
+}
+
+.dark-bg .navbar-toggler .theme-toggler .language-toggler {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.font-color-blue {
+  color: #102D69;
+}
+
+.btn-blue {
+  font-size: 1.15rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #102D69;
+  border-color: #102D69;
+}
+
+.promo-text {
+  font-size: 24px;
+  opacity: .75;
+  font-family: 'Roboto', sans-serif;
+}
+
+.link-border-bottom {
+  display: inline-block;
+  padding:0;
+  text-decoration: none;
+  line-height: 1.3;
+  border-bottom: 1px solid #6c757d;
+  transition: .4s ease;
+}
+
+.text-white.link-border-bottom {
+  border-bottom: 1px solid #fff;
+}
+
+.link-border-bottom:hover {
+  border-color: transparent;
+}
+
+.link {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  transition: .4s ease;
+  border-bottom: 1px solid rgba(255,255,255,.8);
+}
+
+.link:hover {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  border-color: transparent;
+}
+
+.link.link-blue {
+  color: #102D69;
+  border-color: #102D69;
+}
+
+.link.link-blue:hover {
+  color: #102D69;
+  border-color: transparent;
+}
+
+.link.link-purple {
+  color: #DFC7F2;
+  border-color: #DFC7F2;
+}
+
+.link.link-purple:hover {
+  color: #DFC7F2;
+  border-color: transparent;
+}
+
+.link.link-yellow {
+  color: #DCFF05;
+  border-color: #DCFF05;
+}
+
+.link.link-yellow:hover {
+  color: #DCFF05;
+  border-color: transparent;
+}
+
+.text-yellow {
+  color: #DCFF05 !important;
+}
+
+.logo:hover {
+  text-decoration: none;
+  transition: .4s ease;
+  opacity: .85;
+}
+
+.logo-title {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.logo-subtitle {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.story p {
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.story-link {
+  color: #102D69;
+  text-decoration: none;
+  transition: .4s ease;
+  border-bottom: 2px solid #102D69;
+}
+
+.story-link:hover {
+  color: #102D69;
+  text-decoration: none;
+  border-color: transparent;
+}
+
+.greeting-text {
+  color: #DFC7F2;
+  font-family: 'Navigo', sans-serif;
+  font-weight: normal;
+}
+
+.navbar .nav-link.link-purple {
+  color: #DFC7F2 !important;
+}
+
+.navbar .nav-link.link-purple:hover {
+  color: #DFC7F2 !important;
+}
+
+.logo-right {
+  margin-left: 6px;
+}
+
+.text-blue {
+  color: #DFC7F2 !important;
+}
+
+h1.greeting-text {
+  color: #DFC7F2;
+}
+
+.btn-yellow {
+  background-color: #DCFF05;
+  color: #102D69;
+}
+
+.btn-yellow:hover {
+  background-color: #c4e004;  /* Немного темнее при наведении */
+  color: #102D69;
+}
+
+.navigo-font {
+  font-family: 'Navigo', sans-serif;
+  font-weight: normal;
+}
+
+.text-purple {
+  color: #DFC7F2 !important;
+}
+
+.text-white-40 {
+  color: #fff !important;
+  opacity: 0.4;
+}
+
+.position {
+  margin-left: 20px;
+}
+
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Пример изменения других элементов */
+body.dark .theme-switcher .slider {
+  background-color: #444;
+}
+
+/* Контейнер переключателя */
+.theme-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Основной стиль для переключателя */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Скрытый чекбокс */
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Слайдер (фон переключателя) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+}
+
+/* Круглый бегунок */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Иконки: солнце и луна */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.sun {
+  left: 8px;
+  color: #ffcc33;
+}
+
+.moon {
+  right: 8px;
+  color: #6666ff;
+  opacity: 0;
+}
+
+/* Когда чекбокс активен */
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+input:checked ~ .sun {
+  opacity: 0;
+}
+
+input:checked ~ .moon {
+  opacity: 1;
+}
+
+/* Контейнер переключателя языка */
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Основной стиль для переключателя языка */
+.language-toggle {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 36px;
+}
+
+/* Скрытый чекбокс */
+.language-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Слайдер (фон переключателя) */
+.language-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 36px;
+  transition: background-color 0.4s;
+}
+
+/* Бегунок */
+.language-toggle .slider::before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Иконки: RU и EN */
+.language-toggle .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.language-toggle .ru {
+  left: 8px;
+}
+
+.language-toggle .en {
+  right: 8px;
+  opacity: 0;
+}
+
+/* При активном состоянии чекбокса */
+.language-toggle input:checked + .slider::before {
+  transform: translateX(34px);
+}
+
+.language-toggle input:checked + .slider {
+  background-color: #4caf50;
+}
+
+.language-toggle input:checked ~ .ru {
+  opacity: 0;
+}
+
+.language-toggle input:checked ~ .en {
+  opacity: 1;
+}
